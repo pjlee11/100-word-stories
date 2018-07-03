@@ -388,22 +388,20 @@
             </amp-story-page>
         </div>
 
-        <!-- <p style="position: absolute;
-            top: 800px;">
-        <button onclick="myMove()">Click Me</button>
+        <p style="position: absolute;
+            top: 600px;">
+        <button onclick="slideUp()">Click Me</button>
         </p>
 
-        <div id ="myContainer">
-        <div id ="myAnimation"></div>
         </div>
 
         <script>
-        function myMove() {
+        function slideUp() {
           var elem = document.getElementById("100-word-article-wrapper");
-          var pos = 820;
+          var pos = 800;
           var id = setInterval(frame, 1);
           function frame() {
-            if (pos == 0) {
+            if (pos <= 0) {
               clearInterval(id);
             } else {
               pos = pos - 10;
@@ -411,21 +409,35 @@
             }
           }
         }
-        </script> -->
+
+        function slideDown() {
+          var elem = document.getElementById("100-word-article-wrapper");
+          var pos = 0;
+          var id = setInterval(frame, 1);
+          function frame() {
+            if (pos <= 800) {
+              clearInterval(id);
+            } else {
+              pos = pos - 10;
+              elem.style.top = pos + 'px';
+            }
+          }
+        }
+        </script>
 
 
         <div id="100-word-article-wrapper" style="
             position: absolute;
             width: 100%;
             height: 100%;
-            max-width: 478px;
-            /*top: 820px;*/
+            top: 820px;
             background-color: #fff;
             ">
             <h2> 100 word stories</h2>
-            <p> here is some content for the 100 word story</p>
-            <p> here is some content for the 100 word story</p>
-            <p> here is some content for the 100 word story</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci blandit, ornare purus sed, lobortis ante. Integer vehicula nec eros at porta.</p>
+            <p>Nunc pretium ornare ante, vel accumsan enim euismod ac. Fusce porttitor, lectus a scelerisque gravida, lectus mi consectetur dolor, vitae ultricies magna dolor vitae nunc.</p>
+            <p>Ut vel sem varius, varius leo sit amet, luctus nunc. Aenean varius fermentum leo sit amet lacinia. Fusce eu urna elementum, sagittis nibh condimentum, finibus dolor.</p>
+            <p>Phasellus et nibh lorem. Sed augue dui, faucibus in consequat in, tincidunt non arcu. Praesent ut ex risus. Vivamus vitae ullamcorper mauris. In lacinia dui est.</p>
         </div>
     </body>
 </html>
