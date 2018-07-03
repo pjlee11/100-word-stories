@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+    <html ⚡ lang="en">
+        <head>
+            <title>BBC News: 100 word stories</title>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="msapplication-tap-highlight" content="no">
+            <meta content="telephone=no" name="format-detection">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1.0">
+
+            <link rel="canonical" href="https://www.bbc.co.uk/news/100-word-stories/index.html">
+
+            <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+            <script async src="https://cdn.ampproject.org/v0.js"></script>
+            <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+            <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-0.1.js"></script>
+
+            <style amp-custom>
+                @font-face {
+                    font-family: 'BBCReithSansBold';
+                    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff') format('woff');
+                    font-weight: 500;
+                    font-style: normal;
+                }
+
+                @font-face {
+                    font-family: 'BBCReithSansLight';
+                    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Lt.woff') format('woff');
+                    font-weight: 300;
+                    font-style: normal;
+                }
+
+                html, body {
+                    font-size: 18px;
+                }
+                amp-story {
+                    font-family: 'BBCReithSansBold',sans-serif;
+                    color: #fff;
+                }
+                amp-story-page {
+                    background-color: #000;
+                }
+                amp-story-grid-layer.bottom {
+                    align-content:end;
+                }
+                amp-story-grid-layer.noedge {
+                    padding: 0px;
+                }
+                amp-story-grid-layer.center-text {
+                    align-content: center;
+                }
+
+                .image-layer {
+                    padding: 0;
+                }
+
+                .image-container {
+                    position: absolute;
+                    text-align: center;
+                }
+
+                .gradient-container {
+                    position: relative;
+                    height: 100px;
+                    background: linear-gradient(
+                          rgba(0, 0, 0, 0.5),
+                          rgba(0, 0, 0, 0) 50%
+                        )
+                }
+
+                .logo-container {
+                    position: relative;
+                    top: -100px;
+                    left: 16px;
+                }
+
+                .cta {
+                    background-color: red;
+                    background: linear-gradient(
+                          rgba(0, 0, 0, 0),
+                          rgba(0, 0, 0, 1) calc(20vh - 22px - 56px - 5px)
+                        )
+                }
+
+                .cta-button {
+                    margin-left: 32px;
+                    margin-right: 32px;
+                    margin-top: calc(20vh - 22px - 56px - 10px);
+                    height: 56px;
+                    text-align: center;
+                }
+
+                .cta-button__story {
+                    background-color: #BB1919;
+                }
+
+                .cta-button__site {
+                    background-color: black;
+                    font-color: #BB1919;
+                }
+
+                .cta-text {
+                    color: white;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    line-height: 3.111;
+                }
+
+                .red-line {
+                    border-left: 4px solid #bb1919;
+                    height: 100%;
+                    padding-left: 12px;
+                }
+
+                .story-headline {
+                    font-size: 1.555rem;
+                    line-height: 1.14;
+                }
+
+                .story-summary {
+                    font-family: 'BBCReithSansLight';
+                    font-size: 1rem;
+                    line-height: 1.333;
+                    padding-left: 14px;
+                }
+
+                .image-title-padding {
+                    padding-top: calc((100vw / 16) * 9.5);
+                    padding-left: 20px;
+                }
+
+                /*Tablet in portrait mode*/
+                @media only screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: portrait) {
+                    html, body {
+                        font-size: 36px;
+                    }
+
+                    .cta-button {
+                        margin-top: calc(20vh - 22px - 108px - 10px);
+                        height: 108px;
+                    }
+                }
+
+                /*Tablet in landscape mode*/
+                @media only screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation: landscape) {
+                    html, body {
+                        font-size: 21px;
+                    }
+
+                    .cta-button {
+                        margin-top: calc(20vh - 22px - 96px - 10px);
+                        height: 64px;
+                    }
+
+                    .image-title-padding {
+                        padding-top: 200px;
+                    }
+                }
+
+                /* iPad Pro Portrait */
+                @media only screen
+                  and (min-device-width: 1024px)
+                  and (max-device-width: 1366px)
+                  and (orientation: portrait)
+                  and (-webkit-min-device-pixel-ratio: 1.5) {
+                    .cta-button {
+                        margin-top: 54px;
+                    }
+
+                    .image-title-padding {
+                        padding-top: 27vh;
+                    }
+                }
+
+                /* Desktop */
+                @media only screen and (min-width: 1025px) {
+                    .cta-button {
+                        margin-top: 20px;
+                    }
+
+                    .image-title-padding {
+                        padding-top: 27vh;
+                    }
+                }
+
+                .centred {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .logo-padding {
+                    padding-top: 33px;
+                }
+                .end-page-padding {
+                    padding: 0 32px;
+                }
+                .bookend-header {
+                    max-width: 295px;
+                    font-size: 2rem;
+                    line-height: 1.25;
+                    padding-bottom: 30px;
+                }
+                .bookend-date {
+                    font-size: 1.166rem;
+                    line-height: 1.143;
+                }
+            </style>
+             <script type="application/ld+json">
+                  {
+                    "@context": "http://schema.org",
+                    "@type": "NewsArticle",
+                    "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": "https://www.bbc.co.uk/news/ampstories/headlines/index.html"
+                    },
+                    "headline": "The latest headlines from around the globe",
+                    "image": [
+                        "https://news.files.bbci.co.uk/include/newslabs/ampstories/shared/globe-white-1-1.jpg",
+                        "https://news.files.bbci.co.uk/include/newslabs/ampstories/shared/globe-white-3-4.png",
+                        "https://news.files.bbci.co.uk/include/newslabs/ampstories/shared/globe-white-4-3.png"
+                    ],
+                    "datePublished": "July 2 2018",
+                    "dateModified": "2018-07-02 20:32:19",
+                    "author": {
+                      "@type": "Organization",
+                      "name": "BBC News"
+                    },
+                    "description": "The latest headlines from around the globe",
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "BBC News",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://news.files.bbci.co.uk/include/newslabs/ampstories/en/red_tile_logo.png",
+                        "width": 60,
+                        "height": 60
+                      }
+                    }
+                  }
+                </script>
+        </head>
+        <body>
+            <amp-story standalone title="BBC News: 100 word stories"
+                publisher="BBC News"
+                publisher-logo-src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/red_tile_logo.png">
+
+            <amp-story-page id="cover">
+                <amp-story-grid-layer template="fill">
+                    <amp-img src="https://news.files.bbci.co.uk/include/newslabs/ampstories/shared/globe-red-16-9.png" width="576" height="1024" layout="responsive"></amp-img>
+
+                </amp-story-grid-layer>
+
+                <amp-story-grid-layer template="thirds">
+                    <div grid-area="upper-third" class="centred logo-padding">
+                        <amp-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BBC.svg/2000px-BBC.svg.png" width="385px" height="110px"></amp-img>
+                    </div>
+                    <div grid-area="middle-third" class="centred">
+                        <h1 class="bookend-header">The latest headlines from around the globe</h1>
+                        <h2 class="bookend-date">July 2 2018</h2>
+                    </div>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+       <amp-story-page id="story-0">
+            <amp-story-grid-layer template="vertical" class="image-layer">
+                <div class="image-container">
+                    <amp-img src="https://ichef.bbci.co.uk/images/ic/720x405/p06cq0hs.jpg" width="720" height="405" layout="responsive"></amp-img>
+                </div>
+                <div class="gradient-container"></div>
+                <div class="logo-container">
+                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+
+            <amp-story-grid-layer template="vertical" class="image-title-padding">
+                <div class="red-line">
+                    <h1 class="story-headline">Thailand cave rescue: Boys found alive after nine days</h1>
+               </div>
+                <p class="story-summary">Rescuers must now extract the 12 boys and their teacher, discovered after nine nerve-wracking days.</p>
+            </amp-story-grid-layer>
+            <amp-story-cta-layer class="cta">
+                <div class="cta-button cta-button__story">
+                    <a href="https://www.bbc.co.uk/news/amp/world-asia-44688909" class="cta-text">Read the full story</a>
+                </div>
+            </amp-story-cta-layer>
+        </amp-story-page>
+
+       <amp-story-page id="story-1">
+            <amp-story-grid-layer template="vertical" class="image-layer">
+                <div class="image-container">
+                    <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/18524/production/_102302699_cffc81a6-9a4a-460d-bbd7-0e8fcb2551ed.jpg" width="976" height="549" layout="responsive"></amp-img>
+                </div>
+                <div class="gradient-container"></div>
+                <div class="logo-container">
+                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+
+            <amp-story-grid-layer template="vertical" class="image-title-padding">
+                <div class="red-line">
+                    <h1 class="story-headline">UK weather: Heatwave to continue for another two weeks</h1>
+               </div>
+                <p class="story-summary">As forecasters predict the "very warm sunshine" is here to stay, people are urged to use water wisely.</p>
+            </amp-story-grid-layer>
+            <amp-story-cta-layer class="cta">
+                <div class="cta-button cta-button__story">
+                    <a href="https://www.bbc.co.uk/news/amp/uk-44687564" class="cta-text">Read the full story</a>
+                </div>
+            </amp-story-cta-layer>
+        </amp-story-page>
+
+       <amp-story-page id="story-2">
+            <amp-story-grid-layer template="vertical" class="image-layer">
+                <div class="image-container">
+                    <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/30D4/production/_102300521_aleshamacphail.jpg" width="976" height="549" layout="responsive"></amp-img>
+                </div>
+                <div class="gradient-container"></div>
+                <div class="logo-container">
+                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+
+            <amp-story-grid-layer template="vertical" class="image-title-padding">
+                <div class="red-line">
+                    <h1 class="story-headline">Body of missing Alesha MacPhail, 6, found on Isle of Bute</h1>
+               </div>
+                <p class="story-summary">The girl had been reported missing on the Isle of Bute two-and-a-half hours earlier.</p>
+            </amp-story-grid-layer>
+            <amp-story-cta-layer class="cta">
+                <div class="cta-button cta-button__story">
+                    <a href="https://www.bbc.co.uk/news/amp/uk-scotland-glasgow-west-44682406" class="cta-text">Read the full story</a>
+                </div>
+            </amp-story-cta-layer>
+        </amp-story-page>
+
+       <amp-story-page id="story-3">
+            <amp-story-grid-layer template="vertical" class="image-layer">
+                <div class="image-container">
+                    <amp-img src="https://ichef.bbci.co.uk/images/ic/720x405/p06cpkgf.jpg" width="720" height="405" layout="responsive"></amp-img>
+                </div>
+                <div class="gradient-container"></div>
+                <div class="logo-container">
+                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+
+            <amp-story-grid-layer template="vertical" class="image-title-padding">
+                <div class="red-line">
+                    <h1 class="story-headline">Brexit: May says EU must treat UK blueprint 'seriously'</h1>
+               </div>
+                <p class="story-summary">Theresa May urges more flexibility from the EU ahead of a new UK plan for customs arrangements.</p>
+            </amp-story-grid-layer>
+            <amp-story-cta-layer class="cta">
+                <div class="cta-button cta-button__story">
+                    <a href="https://www.bbc.co.uk/news/amp/uk-politics-44671507" class="cta-text">Read the full story</a>
+                </div>
+            </amp-story-cta-layer>
+        </amp-story-page>
+
+       <amp-story-page id="story-4">
+            <amp-story-grid-layer template="vertical" class="image-layer">
+                <div class="image-container">
+                    <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/D58D/production/_102296645_mediaitem102296639.jpg" width="976" height="549" layout="responsive"></amp-img>
+                </div>
+                <div class="gradient-container"></div>
+                <div class="logo-container">
+                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                </div>
+            </amp-story-grid-layer>
+
+            <amp-story-grid-layer template="vertical" class="image-title-padding">
+                <div class="red-line">
+                    <h1 class="story-headline">Syria war: 270,000 displaced by fighting in south-west</h1>
+               </div>
+                <p class="story-summary">Government forces began an assault on rebel-held areas of Deraa and Quneitra provinces two weeks ago.</p>
+            </amp-story-grid-layer>
+            <amp-story-cta-layer class="cta">
+                <div class="cta-button cta-button__story">
+                    <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
+                </div>
+            </amp-story-cta-layer>
+        </amp-story-page>
+        <div id="100-word-article-wrapper" style="position: absolute; top: 800px;">
+            <h2> 100 word stories</h2>
+            <p> here is some content for the 100 word story</p>
+            <p> here is some content for the 100 word story</p>
+            <p> here is some content for the 100 word story</p>
+        </div>
+    </body>
+</html>
+
