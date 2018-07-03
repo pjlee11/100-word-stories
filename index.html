@@ -245,147 +245,183 @@
                 </script>
         </head>
         <body>
-            <amp-story standalone title="BBC News: 100 word stories"
-                publisher="BBC News"
-                publisher-logo-src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/red_tile_logo.png">
+            <div class="amp-story-page-wrapper">
+                <amp-story standalone title="BBC News: 100 word stories"
+                    publisher="BBC News"
+                    publisher-logo-src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/red_tile_logo.png">
 
-            <amp-story-page id="cover">
-                <amp-story-grid-layer template="fill">
-                    <amp-img src="https://news.files.bbci.co.uk/include/newslabs/ampstories/shared/globe-red-16-9.png" width="576" height="1024" layout="responsive"></amp-img>
+                <amp-story-page id="cover">
+                    <amp-story-grid-layer template="fill">
+                        <amp-img src="https://news.files.bbci.co.uk/include/newslabs/ampstories/shared/globe-red-16-9.png" width="576" height="1024" layout="responsive"></amp-img>
 
+                    </amp-story-grid-layer>
+
+                    <amp-story-grid-layer template="thirds">
+                        <div grid-area="upper-third" class="centred logo-padding">
+                            <amp-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BBC.svg/2000px-BBC.svg.png" width="385px" height="110px"></amp-img>
+                        </div>
+                        <div grid-area="middle-third" class="centred">
+                            <h1 class="bookend-header">The latest headlines from around the globe</h1>
+                            <h2 class="bookend-date">July 2 2018</h2>
+                        </div>
+                    </amp-story-grid-layer>
+                </amp-story-page>
+
+           <amp-story-page id="story-0">
+                <amp-story-grid-layer template="vertical" class="image-layer">
+                    <div class="image-container">
+                        <amp-img src="https://ichef.bbci.co.uk/images/ic/720x405/p06cq0hs.jpg" width="720" height="405" layout="responsive"></amp-img>
+                    </div>
+                    <div class="gradient-container"></div>
+                    <div class="logo-container">
+                        <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                    </div>
                 </amp-story-grid-layer>
 
-                <amp-story-grid-layer template="thirds">
-                    <div grid-area="upper-third" class="centred logo-padding">
-                        <amp-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BBC.svg/2000px-BBC.svg.png" width="385px" height="110px"></amp-img>
-                    </div>
-                    <div grid-area="middle-third" class="centred">
-                        <h1 class="bookend-header">The latest headlines from around the globe</h1>
-                        <h2 class="bookend-date">July 2 2018</h2>
-                    </div>
+                <amp-story-grid-layer template="vertical" class="image-title-padding">
+                    <div class="red-line">
+                        <h1 class="story-headline">Thailand cave rescue: Boys found alive after nine days</h1>
+                   </div>
+                    <p class="story-summary">Rescuers must now extract the 12 boys and their teacher, discovered after nine nerve-wracking days.</p>
                 </amp-story-grid-layer>
+                <amp-story-cta-layer class="cta">
+                    <div class="cta-button cta-button__story">
+                        <a href="https://www.bbc.co.uk/news/amp/world-asia-44688909" class="cta-text">Read the full story</a>
+                    </div>
+                </amp-story-cta-layer>
             </amp-story-page>
 
-       <amp-story-page id="story-0">
-            <amp-story-grid-layer template="vertical" class="image-layer">
-                <div class="image-container">
-                    <amp-img src="https://ichef.bbci.co.uk/images/ic/720x405/p06cq0hs.jpg" width="720" height="405" layout="responsive"></amp-img>
-                </div>
-                <div class="gradient-container"></div>
-                <div class="logo-container">
-                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
-                </div>
-            </amp-story-grid-layer>
+           <amp-story-page id="story-1">
+                <amp-story-grid-layer template="vertical" class="image-layer">
+                    <div class="image-container">
+                        <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/18524/production/_102302699_cffc81a6-9a4a-460d-bbd7-0e8fcb2551ed.jpg" width="976" height="549" layout="responsive"></amp-img>
+                    </div>
+                    <div class="gradient-container"></div>
+                    <div class="logo-container">
+                        <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                    </div>
+                </amp-story-grid-layer>
 
-            <amp-story-grid-layer template="vertical" class="image-title-padding">
-                <div class="red-line">
-                    <h1 class="story-headline">Thailand cave rescue: Boys found alive after nine days</h1>
-               </div>
-                <p class="story-summary">Rescuers must now extract the 12 boys and their teacher, discovered after nine nerve-wracking days.</p>
-            </amp-story-grid-layer>
-            <amp-story-cta-layer class="cta">
-                <div class="cta-button cta-button__story">
-                    <a href="https://www.bbc.co.uk/news/amp/world-asia-44688909" class="cta-text">Read the full story</a>
-                </div>
-            </amp-story-cta-layer>
-        </amp-story-page>
+                <amp-story-grid-layer template="vertical" class="image-title-padding">
+                    <div class="red-line">
+                        <h1 class="story-headline">UK weather: Heatwave to continue for another two weeks</h1>
+                   </div>
+                    <p class="story-summary">As forecasters predict the "very warm sunshine" is here to stay, people are urged to use water wisely.</p>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="cta">
+                    <div class="cta-button cta-button__story">
+                        <a href="https://www.bbc.co.uk/news/amp/uk-44687564" class="cta-text">Read the full story</a>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
 
-       <amp-story-page id="story-1">
-            <amp-story-grid-layer template="vertical" class="image-layer">
-                <div class="image-container">
-                    <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/18524/production/_102302699_cffc81a6-9a4a-460d-bbd7-0e8fcb2551ed.jpg" width="976" height="549" layout="responsive"></amp-img>
-                </div>
-                <div class="gradient-container"></div>
-                <div class="logo-container">
-                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
-                </div>
-            </amp-story-grid-layer>
+           <amp-story-page id="story-2">
+                <amp-story-grid-layer template="vertical" class="image-layer">
+                    <div class="image-container">
+                        <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/30D4/production/_102300521_aleshamacphail.jpg" width="976" height="549" layout="responsive"></amp-img>
+                    </div>
+                    <div class="gradient-container"></div>
+                    <div class="logo-container">
+                        <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                    </div>
+                </amp-story-grid-layer>
 
-            <amp-story-grid-layer template="vertical" class="image-title-padding">
-                <div class="red-line">
-                    <h1 class="story-headline">UK weather: Heatwave to continue for another two weeks</h1>
-               </div>
-                <p class="story-summary">As forecasters predict the "very warm sunshine" is here to stay, people are urged to use water wisely.</p>
-            </amp-story-grid-layer>
-            <amp-story-cta-layer class="cta">
-                <div class="cta-button cta-button__story">
-                    <a href="https://www.bbc.co.uk/news/amp/uk-44687564" class="cta-text">Read the full story</a>
-                </div>
-            </amp-story-cta-layer>
-        </amp-story-page>
+                <amp-story-grid-layer template="vertical" class="image-title-padding">
+                    <div class="red-line">
+                        <h1 class="story-headline">Body of missing Alesha MacPhail, 6, found on Isle of Bute</h1>
+                   </div>
+                    <p class="story-summary">The girl had been reported missing on the Isle of Bute two-and-a-half hours earlier.</p>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="cta">
+                    <div class="cta-button cta-button__story">
+                        <a href="https://www.bbc.co.uk/news/amp/uk-scotland-glasgow-west-44682406" class="cta-text">Read the full story</a>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
 
-       <amp-story-page id="story-2">
-            <amp-story-grid-layer template="vertical" class="image-layer">
-                <div class="image-container">
-                    <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/30D4/production/_102300521_aleshamacphail.jpg" width="976" height="549" layout="responsive"></amp-img>
-                </div>
-                <div class="gradient-container"></div>
-                <div class="logo-container">
-                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
-                </div>
-            </amp-story-grid-layer>
+           <amp-story-page id="story-3">
+                <amp-story-grid-layer template="vertical" class="image-layer">
+                    <div class="image-container">
+                        <amp-img src="https://ichef.bbci.co.uk/images/ic/720x405/p06cpkgf.jpg" width="720" height="405" layout="responsive"></amp-img>
+                    </div>
+                    <div class="gradient-container"></div>
+                    <div class="logo-container">
+                        <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                    </div>
+                </amp-story-grid-layer>
 
-            <amp-story-grid-layer template="vertical" class="image-title-padding">
-                <div class="red-line">
-                    <h1 class="story-headline">Body of missing Alesha MacPhail, 6, found on Isle of Bute</h1>
-               </div>
-                <p class="story-summary">The girl had been reported missing on the Isle of Bute two-and-a-half hours earlier.</p>
-            </amp-story-grid-layer>
-            <amp-story-cta-layer class="cta">
-                <div class="cta-button cta-button__story">
-                    <a href="https://www.bbc.co.uk/news/amp/uk-scotland-glasgow-west-44682406" class="cta-text">Read the full story</a>
-                </div>
-            </amp-story-cta-layer>
-        </amp-story-page>
+                <amp-story-grid-layer template="vertical" class="image-title-padding">
+                    <div class="red-line">
+                        <h1 class="story-headline">Brexit: May says EU must treat UK blueprint 'seriously'</h1>
+                   </div>
+                    <p class="story-summary">Theresa May urges more flexibility from the EU ahead of a new UK plan for customs arrangements.</p>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="cta">
+                    <div class="cta-button cta-button__story">
+                        <a href="https://www.bbc.co.uk/news/amp/uk-politics-44671507" class="cta-text">Read the full story</a>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
 
-       <amp-story-page id="story-3">
-            <amp-story-grid-layer template="vertical" class="image-layer">
-                <div class="image-container">
-                    <amp-img src="https://ichef.bbci.co.uk/images/ic/720x405/p06cpkgf.jpg" width="720" height="405" layout="responsive"></amp-img>
-                </div>
-                <div class="gradient-container"></div>
-                <div class="logo-container">
-                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
-                </div>
-            </amp-story-grid-layer>
+           <amp-story-page id="story-4">
+                <amp-story-grid-layer template="vertical" class="image-layer">
+                    <div class="image-container">
+                        <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/D58D/production/_102296645_mediaitem102296639.jpg" width="976" height="549" layout="responsive"></amp-img>
+                    </div>
+                    <div class="gradient-container"></div>
+                    <div class="logo-container">
+                        <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
+                    </div>
+                </amp-story-grid-layer>
 
-            <amp-story-grid-layer template="vertical" class="image-title-padding">
-                <div class="red-line">
-                    <h1 class="story-headline">Brexit: May says EU must treat UK blueprint 'seriously'</h1>
-               </div>
-                <p class="story-summary">Theresa May urges more flexibility from the EU ahead of a new UK plan for customs arrangements.</p>
-            </amp-story-grid-layer>
-            <amp-story-cta-layer class="cta">
-                <div class="cta-button cta-button__story">
-                    <a href="https://www.bbc.co.uk/news/amp/uk-politics-44671507" class="cta-text">Read the full story</a>
-                </div>
-            </amp-story-cta-layer>
-        </amp-story-page>
+                <amp-story-grid-layer template="vertical" class="image-title-padding">
+                    <div class="red-line">
+                        <h1 class="story-headline">Syria war: 270,000 displaced by fighting in south-west</h1>
+                   </div>
+                    <p class="story-summary">Government forces began an assault on rebel-held areas of Deraa and Quneitra provinces two weeks ago.</p>
+                </amp-story-grid-layer>
+                <amp-story-cta-layer class="cta">
+                    <div class="cta-button cta-button__story">
+                        <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
+                    </div>
+                </amp-story-cta-layer>
+            </amp-story-page>
+        </div>
 
-       <amp-story-page id="story-4">
-            <amp-story-grid-layer template="vertical" class="image-layer">
-                <div class="image-container">
-                    <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/D58D/production/_102296645_mediaitem102296639.jpg" width="976" height="549" layout="responsive"></amp-img>
-                </div>
-                <div class="gradient-container"></div>
-                <div class="logo-container">
-                    <amp-img width="120" height="16" src="https://news.files.bbci.co.uk/include/newslabs/ampstories/en/clear_strip_logo.png"></amp-img>
-                </div>
-            </amp-story-grid-layer>
+        <!-- <p style="position: absolute;
+            top: 800px;">
+        <button onclick="myMove()">Click Me</button>
+        </p>
 
-            <amp-story-grid-layer template="vertical" class="image-title-padding">
-                <div class="red-line">
-                    <h1 class="story-headline">Syria war: 270,000 displaced by fighting in south-west</h1>
-               </div>
-                <p class="story-summary">Government forces began an assault on rebel-held areas of Deraa and Quneitra provinces two weeks ago.</p>
-            </amp-story-grid-layer>
-            <amp-story-cta-layer class="cta">
-                <div class="cta-button cta-button__story">
-                    <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
-                </div>
-            </amp-story-cta-layer>
-        </amp-story-page>
-        <div id="100-word-article-wrapper" style="position: absolute; top: 800px;">
+        <div id ="myContainer">
+        <div id ="myAnimation"></div>
+        </div>
+
+        <script>
+        function myMove() {
+          var elem = document.getElementById("100-word-article-wrapper");
+          var pos = 820;
+          var id = setInterval(frame, 1);
+          function frame() {
+            if (pos == 0) {
+              clearInterval(id);
+            } else {
+              pos = pos - 10;
+              elem.style.top = pos + 'px';
+            }
+          }
+        }
+        </script> -->
+
+
+        <div id="100-word-article-wrapper" style="
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 478px;
+            /*top: 820px;*/
+            background-color: #fff;
+            ">
             <h2> 100 word stories</h2>
             <p> here is some content for the 100 word story</p>
             <p> here is some content for the 100 word story</p>
