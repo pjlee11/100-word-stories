@@ -19,6 +19,36 @@
             <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
             <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-0.1.js"></script>
 
+            <script>
+                function slideUp() {
+                  var elem = document.getElementById("100-word-article-wrapper");
+                  var pos = 800;
+                  var id = setInterval(frame, 1);
+                  function frame() {
+                    if (pos <= 0) {
+                      clearInterval(id);
+                    } else {
+                      pos = pos - 10;
+                      elem.style.top = pos + 'px';
+                    }
+                  }
+                }
+
+                function slideDown() {
+                  var elem = document.getElementById("100-word-article-wrapper");
+                  var pos = 0;
+                  var id = setInterval(frame, 1);
+                  function frame() {
+                    if (pos <= 800) {
+                      clearInterval(id);
+                    } else {
+                      pos = pos - 10;
+                      elem.style.top = pos + 'px';
+                    }
+                  }
+                }
+            </script>
+
             <style amp-custom>
                 @font-face {
                     font-family: 'BBCReithSansBold';
@@ -258,11 +288,11 @@
 
                     <amp-story-grid-layer template="thirds">
                         <div grid-area="upper-third" class="centred logo-padding">
-                            <amp-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BBC.svg/2000px-BBC.svg.png" width="385px" height="110px"></amp-img>
+                            <amp-img src="./assets/BBC-blocks.png" width="385px" height="110px"></amp-img>
                         </div>
                         <div grid-area="middle-third" class="centred">
-                            <h1 class="bookend-header">The latest headlines from around the globe</h1>
-                            <h2 class="bookend-date">July 2 2018</h2>
+                            <h1 class="bookend-header">100 word stories</h1>
+                            <h2 class="bookend-date">Clear concise digestable content</h2>
                         </div>
                     </amp-story-grid-layer>
                 </amp-story-page>
@@ -380,64 +410,38 @@
                    </div>
                     <p class="story-summary">Government forces began an assault on rebel-held areas of Deraa and Quneitra provinces two weeks ago.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
-        </div>
+        </amp-story>
+    </div>
+    <div onclick="slideUp();" class="open-article-cta cta-button cta-button__story" style="
+        position: absolute;
+        bottom: 32px;
+        width: 83%;
+    ">
+        <p style="
+            text-align: center;
+        ">Article in 100 words</p>
+    </div>
 
-        <p style="position: absolute;
-            top: 600px;">
-        <button onclick="slideUp()">Click Me</button>
-        </p>
-
-        </div>
-
-        <script>
-        function slideUp() {
-          var elem = document.getElementById("100-word-article-wrapper");
-          var pos = 800;
-          var id = setInterval(frame, 1);
-          function frame() {
-            if (pos <= 0) {
-              clearInterval(id);
-            } else {
-              pos = pos - 10;
-              elem.style.top = pos + 'px';
-            }
-          }
-        }
-
-        function slideDown() {
-          var elem = document.getElementById("100-word-article-wrapper");
-          var pos = 0;
-          var id = setInterval(frame, 1);
-          function frame() {
-            if (pos <= 800) {
-              clearInterval(id);
-            } else {
-              pos = pos - 10;
-              elem.style.top = pos + 'px';
-            }
-          }
-        }
-        </script>
-
-
-        <div id="100-word-article-wrapper" style="
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 820px;
-            background-color: #fff;
-            ">
-            <h2> 100 word stories</h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci blandit, ornare purus sed, lobortis ante. Integer vehicula nec eros at porta.</p>
-            <p>Nunc pretium ornare ante, vel accumsan enim euismod ac. Fusce porttitor, lectus a scelerisque gravida, lectus mi consectetur dolor, vitae ultricies magna dolor vitae nunc.</p>
-            <p>Ut vel sem varius, varius leo sit amet, luctus nunc. Aenean varius fermentum leo sit amet lacinia. Fusce eu urna elementum, sagittis nibh condimentum, finibus dolor.</p>
-            <p>Phasellus et nibh lorem. Sed augue dui, faucibus in consequat in, tincidunt non arcu. Praesent ut ex risus. Vivamus vitae ullamcorper mauris. In lacinia dui est.</p>
+    <div id="100-word-article-wrapper" style="
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 800px;
+        background-color: #fff;
+        ">
+        <div onclick="slideDown();" class="open-article-cta cta-button cta-button__story" style="
+            top: 10px;
+            bottom: 32px;
+            width: 83%;
+        ">
+        <h2> 100 word stories</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci blandit, ornare purus sed, lobortis ante. Integer vehicula nec eros at porta.</p>
+        <p>Nunc pretium ornare ante, vel accumsan enim euismod ac. Fusce porttitor, lectus a scelerisque gravida, lectus mi consectetur dolor, vitae ultricies magna dolor vitae nunc.</p>
+        <p>Ut vel sem varius, varius leo sit amet, luctus nunc. Aenean varius fermentum leo sit amet lacinia. Fusce eu urna elementum, sagittis nibh condimentum, finibus dolor.</p>
+        <p>Phasellus et nibh lorem. Sed augue dui, faucibus in consequat in, tincidunt non arcu. Praesent ut ex risus. Vivamus vitae ullamcorper mauris. In lacinia dui est.</p>
+        <div class="cta-button cta-button__story">
+            <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
         </div>
     </body>
 </html>
