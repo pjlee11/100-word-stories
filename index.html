@@ -146,6 +146,7 @@
                     font-size: 1rem;
                     text-decoration: none;
                     line-height: 3.111;
+                    margin: 0;
                 }
 
                 .red-line {
@@ -441,17 +442,22 @@
 
             <p>It’s a positive step, activists say. But one campaigner says it’s not enough - especially when Britain is still deporting some LGBT people back to homophobic countries.</p>
 
-            <div id="see-full-article-btn" class="cta-button cta-button__story">
+            <div id="see-full-article-btn" class="cta-button cta-button__story" style="
+                margin-top: 0;
+            ">
                 <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
             </div>
         </div>
         <div id="see-carousel-btn" onclick="slideDown();" class="open-article-cta cta-button cta-button__story" style="
+            margin: 0;
             display: none;
             position: absolute;
-            top: 32px;
-            width: 83%;
+            height: 40px;
+            width: 40px;
+            top: 0;
+            right: 0;
         ">
-            <p class="cta-text">Back to carousel</p>
+            <p style="line-height: 2; font-size: 24px;" class="cta-text">^</p>
         </div>
     </body>
 </html>

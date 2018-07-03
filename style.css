@@ -1,10 +1,12 @@
+h1, h2, h3, p, a {
+    font-family: 'BBCReithSansLight',sans-serif;
+}
+
 #one-hundred-word-article-wrapper h2 {
-	font-family: 'BBCReithSansBold',sans-serif;
 	font-size: 18px;
 }
 
 #one-hundred-word-article-wrapper p {
-	font-family: 'BBCReithSansLight',sans-serif;
 	font-size: 14px;
 }
 /*
@@ -38,6 +40,10 @@
     position: absolute;
     top: 0;
     padding: 0 15px;
+}
+
+.gradient h2 {
+    margin-right: 16px;
 }
 
 .image-and-copyright-container {
