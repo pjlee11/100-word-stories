@@ -11,6 +11,8 @@
             <meta content="telephone=no" name="format-detection">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1.0">
 
+
+            <link href="style.css" rel="stylesheet">
             <link rel="canonical" href="https://www.bbc.co.uk/news/100-word-stories/index.html">
 
             <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -21,12 +23,15 @@
 
             <script>
                 function slideUp() {
-                  var elem = document.getElementById("100-word-article-wrapper");
+                    document.getElementById("see-article-btn").classList.add('display-none');
+
+                  var elem = document.getElementById("one-hundred-word-article-wrapper");
                   var pos = 800;
                   var id = setInterval(frame, 1);
                   function frame() {
                     if (pos <= 0) {
                       clearInterval(id);
+                      document.getElementById("see-carousel-btn").classList.add('display-block');
                     } else {
                       pos = pos - 10;
                       elem.style.top = pos + 'px';
@@ -35,14 +40,17 @@
                 }
 
                 function slideDown() {
-                  var elem = document.getElementById("100-word-article-wrapper");
+                  document.getElementById("see-carousel-btn").classList.remove('display-block');
+
+                  var elem = document.getElementById("one-hundred-word-article-wrapper");
                   var pos = 0;
                   var id = setInterval(frame, 1);
                   function frame() {
-                    if (pos <= 800) {
+                    if (pos >= 800) {
                       clearInterval(id);
+                      document.getElementById("see-article-btn").classList.remove('display-none');
                     } else {
-                      pos = pos - 10;
+                      pos = pos + 10;
                       elem.style.top = pos + 'px';
                     }
                   }
@@ -314,11 +322,6 @@
                    </div>
                     <p class="story-summary">Rescuers must now extract the 12 boys and their teacher, discovered after nine nerve-wracking days.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/world-asia-44688909" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
 
            <amp-story-page id="story-1">
@@ -338,11 +341,6 @@
                    </div>
                     <p class="story-summary">As forecasters predict the "very warm sunshine" is here to stay, people are urged to use water wisely.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/uk-44687564" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
 
            <amp-story-page id="story-2">
@@ -362,11 +360,6 @@
                    </div>
                     <p class="story-summary">The girl had been reported missing on the Isle of Bute two-and-a-half hours earlier.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/uk-scotland-glasgow-west-44682406" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
 
            <amp-story-page id="story-3">
@@ -386,11 +379,6 @@
                    </div>
                     <p class="story-summary">Theresa May urges more flexibility from the EU ahead of a new UK plan for customs arrangements.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/uk-politics-44671507" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
 
            <amp-story-page id="story-4">
@@ -413,35 +401,73 @@
             </amp-story-page>
         </amp-story>
     </div>
-    <div onclick="slideUp();" class="open-article-cta cta-button cta-button__story" style="
+    <div id="see-article-btn" onclick="slideUp();" class="open-article-cta cta-button cta-button__story" style="
         position: absolute;
         bottom: 32px;
         width: 83%;
     ">
-        <p style="
-            text-align: center;
-        ">Article in 100 words</p>
+        <p class="cta-text">Article in 100 words</p>
     </div>
 
-    <div id="100-word-article-wrapper" style="
+    <div id="one-hundred-word-article-wrapper" style="
         position: absolute;
-        width: 100%;
         height: 100%;
         top: 800px;
         background-color: #fff;
         ">
-        <div onclick="slideDown();" class="open-article-cta cta-button cta-button__story" style="
-            top: 10px;
-            bottom: 32px;
+            <!--
+            <ul class="list-inline list-inline--divided gel-brevier">
+                <li class="story-info__item story-info__item--time">
+                    <span class="timestamp">
+                        <i aria-hidden="true" class="timestamp__icon gelicon gelicon--duration"></i>
+                        <time data-timestamp="1530620278" data-timestamp-inserted="true" data-verbose="" class="relative-time">20 minutes ago</time>
+                    </span>
+                </li>
+                <li>
+                    <span class="section-tag--nested-link gel-brevier  section-tag"> -->
+                        <!-- <span class="vh">From the section</span>
+                        <a href="/sport/football/world-cup">World Cup</a> -->
+                        <!--
+                    </span>
+                </li>
+            </ul>-->
+            <div class="article-heading">
+                <figure class="media-landscape no-caption full-width lead">
+                    <span class="image-and-copyright-container">
+
+                        <img class="js-image-replace" alt="A couple holds hands wrapped in a rainbow flag" src="https://ichef.bbci.co.uk/news/660/cpsprodpb/97D6/production/_102307883_mediaitem102307882.jpg" width="976" height="549" data-highest-encountered-width="660">
+
+
+
+                         <span class="off-screen">Image copyright</span>
+                         <span class="story-image-copyright">AFP/Getty</span>
+
+                    </span>
+                </figure>
+                <span class="gradient">
+                    <h2>Yes, gay conversion therapy is still a thing in the UK</h2>
+                </span>
+
+            </div>
+            <p>The British government is putting together a 75-point plan that it says will improve the lives of LGBT people.</p>
+
+            <p>So what are they proposing? For starters: improvements to tackling hate crime, and a national LGBT adviser.</p>
+
+            <p>This all came about after a survey of 108,000 LGBT people, two-thirds of whom said they avoid holding hands in public to avoid discrimination.</p>
+
+            <p>It’s a positive step, activists say. But one campaigner says it’s not enough - especially when Britain is still deporting some LGBT people back to homophobic countries.</p>
+
+            <div id="see-full-article-btn" class="cta-button cta-button__story">
+                <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
+            </div>
+        </div>
+        <div id="see-carousel-btn" onclick="slideDown();" class="open-article-cta cta-button cta-button__story" style="
+            display: none;
+            position: absolute;
+            top: 32px;
             width: 83%;
         ">
-        <h2> 100 word stories</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci blandit, ornare purus sed, lobortis ante. Integer vehicula nec eros at porta.</p>
-        <p>Nunc pretium ornare ante, vel accumsan enim euismod ac. Fusce porttitor, lectus a scelerisque gravida, lectus mi consectetur dolor, vitae ultricies magna dolor vitae nunc.</p>
-        <p>Ut vel sem varius, varius leo sit amet, luctus nunc. Aenean varius fermentum leo sit amet lacinia. Fusce eu urna elementum, sagittis nibh condimentum, finibus dolor.</p>
-        <p>Phasellus et nibh lorem. Sed augue dui, faucibus in consequat in, tincidunt non arcu. Praesent ut ex risus. Vivamus vitae ullamcorper mauris. In lacinia dui est.</p>
-        <div class="cta-button cta-button__story">
-            <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
+            <p class="cta-text">Back to carousel</p>
         </div>
     </body>
 </html>
