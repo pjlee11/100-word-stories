@@ -3,7 +3,7 @@
 	font-size: 18px;
 }
 
-#one-hundred-word-article-wrapper p {
+#one-hundred-word-article-wrapper p, .date {
 	font-family: 'BBCReithSansLight',sans-serif;
 	font-size: 14px;
 }
@@ -133,5 +133,18 @@ img {
     font-family: 'BBCReithSansLight',sans-serif;
 }
 
+.date--v2 {
+    background-image: url('news--icons-sprite_x2.png');
+    -webkit-background-size: 32px 32px;
+    -moz-background-size: 32px;
+    -o-background-size: 32px;
+    background-size: 32px;
+    background-position: left -4009px;
+    background-repeat: no-repeat;
+    color: #5a5a5a;
+    margin-left: -10px;
+    padding-left: 28px;
+    margin-top: 10px;
+}
 
 
