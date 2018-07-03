@@ -21,6 +21,42 @@
             <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
             <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-0.1.js"></script>
 
+            <script>
+                function slideUp() {
+                    document.getElementById("see-article-btn").classList.add('display-none');
+
+                  var elem = document.getElementById("one-hundred-word-article-wrapper");
+                  var pos = 800;
+                  var id = setInterval(frame, 1);
+                  function frame() {
+                    if (pos <= 0) {
+                      clearInterval(id);
+                      document.getElementById("see-carousel-btn").classList.add('display-block');
+                    } else {
+                      pos = pos - 10;
+                      elem.style.top = pos + 'px';
+                    }
+                  }
+                }
+
+                function slideDown() {
+                  document.getElementById("see-carousel-btn").classList.remove('display-block');
+
+                  var elem = document.getElementById("one-hundred-word-article-wrapper");
+                  var pos = 0;
+                  var id = setInterval(frame, 1);
+                  function frame() {
+                    if (pos >= 800) {
+                      clearInterval(id);
+                      document.getElementById("see-article-btn").classList.remove('display-none');
+                    } else {
+                      pos = pos + 10;
+                      elem.style.top = pos + 'px';
+                    }
+                  }
+                }
+            </script>
+
             <style amp-custom>
                 @font-face {
                     font-family: 'BBCReithSansBold';
@@ -260,11 +296,11 @@
 
                     <amp-story-grid-layer template="thirds">
                         <div grid-area="upper-third" class="centred logo-padding">
-                            <amp-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BBC.svg/2000px-BBC.svg.png" width="385px" height="110px"></amp-img>
+                            <amp-img src="./assets/BBC-blocks.png" width="385px" height="110px"></amp-img>
                         </div>
                         <div grid-area="middle-third" class="centred">
-                            <h1 class="bookend-header">The latest headlines from around the globe</h1>
-                            <h2 class="bookend-date">July 2 2018</h2>
+                            <h1 class="bookend-header">100 word stories</h1>
+                            <h2 class="bookend-date">Clear concise digestable content</h2>
                         </div>
                     </amp-story-grid-layer>
                 </amp-story-page>
@@ -286,11 +322,6 @@
                    </div>
                     <p class="story-summary">Rescuers must now extract the 12 boys and their teacher, discovered after nine nerve-wracking days.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/world-asia-44688909" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
 
            <amp-story-page id="story-1">
@@ -310,11 +341,6 @@
                    </div>
                     <p class="story-summary">As forecasters predict the "very warm sunshine" is here to stay, people are urged to use water wisely.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/uk-44687564" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
 
            <amp-story-page id="story-2">
@@ -334,11 +360,6 @@
                    </div>
                     <p class="story-summary">The girl had been reported missing on the Isle of Bute two-and-a-half hours earlier.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/uk-scotland-glasgow-west-44682406" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
 
            <amp-story-page id="story-3">
@@ -358,11 +379,6 @@
                    </div>
                     <p class="story-summary">Theresa May urges more flexibility from the EU ahead of a new UK plan for customs arrangements.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/uk-politics-44671507" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
 
            <amp-story-page id="story-4">
@@ -382,42 +398,19 @@
                    </div>
                     <p class="story-summary">Government forces began an assault on rebel-held areas of Deraa and Quneitra provinces two weeks ago.</p>
                 </amp-story-grid-layer>
-                <amp-story-cta-layer class="cta">
-                    <div class="cta-button cta-button__story">
-                        <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
-                    </div>
-                </amp-story-cta-layer>
             </amp-story-page>
-        </div>
-
-        <!-- <p style="position: absolute;
-            top: 800px;">
-        <button onclick="myMove()">Click Me</button>
-        </p>
-
-        <div id ="myContainer">
-        <div id ="myAnimation"></div>
-        </div>
-
-        <script>
-        function myMove() {
-          var elem = document.getElementById("100-word-article-wrapper");
-          var pos = 820;
-          var id = setInterval(frame, 1);
-          function frame() {
-            if (pos == 0) {
-              clearInterval(id);
-            } else {
-              pos = pos - 10;
-              elem.style.top = pos + 'px';
-            }
-          }
-        }
-        </script> -->
-
-
+        </amp-story>
+    </div>
+    <div id="see-article-btn" onclick="slideUp();" class="open-article-cta cta-button cta-button__story" style="
+        position: absolute;
+        bottom: 32px;
+        width: 83%;
+    ">
+        <p class="cta-text">Article in 100 words</p>
+    </div>
         <div id="one-hundred-word-article-wrapper" style="
             position: absolute;
+            top: 800px;
             height: 100%;
             background-color: #fff;
             ">
@@ -434,17 +427,12 @@
                          <span class="story-image-copyright">AFP/Getty</span>
 
                     </span>
-
                 </figure>
                 <span class="gradient">
                     <h2>Yes, gay conversion therapy is still a thing in the UK</h2>
                 </span>
 
             </div>
-
-
-
-
             <p>The British government is putting together a 75-point plan that it says will improve the lives of LGBT people.</p>
 
             <p>So what are they proposing? For starters: improvements to tackling hate crime, and a national LGBT adviser.</p>
@@ -453,6 +441,17 @@
 
             <p>It’s a positive step, activists say. But one campaigner says it’s not enough - especially when Britain is still deporting some LGBT people back to homophobic countries.</p>
 
+            <div id="see-full-article-btn" class="cta-button cta-button__story">
+                <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
+            </div>
+        </div>
+        <div id="see-carousel-btn" onclick="slideDown();" class="open-article-cta cta-button cta-button__story" style="
+            display: none;
+            position: absolute;
+            top: 32px;
+            width: 83%;
+        ">
+            <p class="cta-text">Back to carousel</p>
         </div>
     </body>
 </html>
