@@ -1,0 +1,137 @@
+#one-hundred-word-article-wrapper h2 {
+	font-family: 'BBCReithSansBold',sans-serif;
+	font-size: 18px;
+}
+
+#one-hundred-word-article-wrapper p {
+	font-family: 'BBCReithSansLight',sans-serif;
+	font-size: 14px;
+}
+/*
+#one-hundred-word-article-wrapper p:first-of-type {
+	font-family: 'BBCReithSansBold',sans-serif;
+}*/
+
+#one-hundred-word-article-wrapper {
+	padding:0 16px 0 16px;
+	position: relative;
+}
+
+.article-heading {
+	margin-top: 16px;
+    margin-left: -18px;
+    margin-right: -18px;
+}
+
+#one-hundred-word-article-wrapper h2 {
+    font-family: 'BBCReithSansBold',sans-serif;
+    font-size: 24px;
+    position: relative;
+    margin-top: 8px;
+}
+
+.gradient {
+    color: white;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(255,255,255,0) 100%);
+    /* margin-top: 32px; */
+    position: absolute;
+    top: 0;
+    padding: 0 15px;
+}
+
+.image-and-copyright-container {
+	position: relative;
+}
+
+.list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'BBCReithSansBold',sans-serif;
+}
+
+.gel-brevier, .story-table thead, .story-table tfoot, .brevier, #cps-content p, .sport-ivote .vote-terms, .sp-story-body .sp-story-body__table thead, .sp-story-body .sp-story-body__table tfoot {
+    line-height: 1.125rem;
+}
+.gel-brevier, .story-table thead, .story-table tfoot, .brevier, #cps-content p, .sport-ivote .vote-terms, .sp-story-body .sp-story-body__table thead, .sp-story-body .sp-story-body__table tfoot {
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+.list-inline--divided>li {
+    margin-right: 6px;
+    margin-bottom: 0.25rem;
+    padding-right: 6px;
+    /* border-right: 1px solid #dbdbdb; */
+}
+
+.list-inline>li {
+    display: inline-block;
+    vertical-align: middle;
+}
+.no-keyboard-navigation-in-use * {
+    outline-style: none;
+}
+
+/* image */
+
+.full-width.lead {
+    margin: 0 -18px;
+}
+.story-body .body-width, .story-body .full-width {
+    clear: both;
+}
+.story-body figure {
+    margin-top: 24px;
+}
+.story-body .image-and-copyright-container {
+    position: relative;
+}
+.story-body figure img {
+    display: block;
+    width: 100%;
+}
+
+img {
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+    max-width: 100%;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    width: auto;
+}
+
+.off-screen {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+.story-image-copyright {
+    font-size: 12px;
+    font-size: .75rem;
+    line-height: 1.33333;
+}
+
+.story-image-copyright, .responsive-image__copyright {
+    background: #404040;
+    background: rgba(0,0,0,0.6);
+    bottom: 0;
+    color: #ececec;
+    letter-spacing: .25px;
+    padding: 3px 8px 1px;
+    position: absolute;
+    right: 17px;
+    bottom: 5px;
+    font-family: 'BBCReithSansLight',sans-serif;
+}
+
+
+
