@@ -1,0 +1,45 @@
+#one-hundred-word-article-wrapper h2 {
+	font-family: 'BBCReithSansBold',sans-serif;
+}
+
+#one-hundred-word-article-wrapper p {
+	font-family: 'BBCReithSansLight',sans-serif;
+}
+
+#one-hundred-word-article-wrapper p:first-of-type {
+	font-family: 'BBCReithSansBold',sans-serif;
+}
+
+#one-hundred-word-article-wrapper {
+	padding:0 16px 0 16px;
+}
+
+.list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'BBCReithSansBold',sans-serif;
+}
+
+.gel-brevier, .story-table thead, .story-table tfoot, .brevier, #cps-content p, .sport-ivote .vote-terms, .sp-story-body .sp-story-body__table thead, .sp-story-body .sp-story-body__table tfoot {
+    line-height: 1.125rem;
+}
+.gel-brevier, .story-table thead, .story-table tfoot, .brevier, #cps-content p, .sport-ivote .vote-terms, .sp-story-body .sp-story-body__table thead, .sp-story-body .sp-story-body__table tfoot {
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+.list-inline--divided>li {
+    margin-right: 6px;
+    margin-bottom: 0.25rem;
+    padding-right: 6px;
+    /* border-right: 1px solid #dbdbdb; */
+}
+
+.list-inline>li {
+    display: inline-block;
+    vertical-align: middle;
+}
+.no-keyboard-navigation-in-use * {
+    outline-style: none;
+}

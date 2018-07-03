@@ -11,6 +11,8 @@
             <meta content="telephone=no" name="format-detection">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1.0">
 
+
+            <link href="style.css" rel="stylesheet">
             <link rel="canonical" href="https://www.bbc.co.uk/news/100-word-stories/index.html">
 
             <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -388,20 +390,22 @@
             </amp-story-page>
         </div>
 
-        <p style="position: absolute;
-            top: 600px;">
-        <button onclick="slideUp()">Click Me</button>
+        <!-- <p style="position: absolute;
+            top: 800px;">
+        <button onclick="myMove()">Click Me</button>
         </p>
 
+        <div id ="myContainer">
+        <div id ="myAnimation"></div>
         </div>
 
         <script>
-        function slideUp() {
+        function myMove() {
           var elem = document.getElementById("100-word-article-wrapper");
-          var pos = 800;
+          var pos = 820;
           var id = setInterval(frame, 1);
           function frame() {
-            if (pos <= 0) {
+            if (pos == 0) {
               clearInterval(id);
             } else {
               pos = pos - 10;
@@ -409,35 +413,45 @@
             }
           }
         }
-
-        function slideDown() {
-          var elem = document.getElementById("100-word-article-wrapper");
-          var pos = 0;
-          var id = setInterval(frame, 1);
-          function frame() {
-            if (pos <= 800) {
-              clearInterval(id);
-            } else {
-              pos = pos - 10;
-              elem.style.top = pos + 'px';
-            }
-          }
-        }
-        </script>
+        </script> -->
 
 
-        <div id="100-word-article-wrapper" style="
+        <div id="one-hundred-word-article-wrapper" style="
             position: absolute;
             width: 100%;
             height: 100%;
-            top: 820px;
+            max-width: 478px;
+            /*top: 820px;*/
             background-color: #fff;
             ">
-            <h2> 100 word stories</h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci blandit, ornare purus sed, lobortis ante. Integer vehicula nec eros at porta.</p>
-            <p>Nunc pretium ornare ante, vel accumsan enim euismod ac. Fusce porttitor, lectus a scelerisque gravida, lectus mi consectetur dolor, vitae ultricies magna dolor vitae nunc.</p>
-            <p>Ut vel sem varius, varius leo sit amet, luctus nunc. Aenean varius fermentum leo sit amet lacinia. Fusce eu urna elementum, sagittis nibh condimentum, finibus dolor.</p>
-            <p>Phasellus et nibh lorem. Sed augue dui, faucibus in consequat in, tincidunt non arcu. Praesent ut ex risus. Vivamus vitae ullamcorper mauris. In lacinia dui est.</p>
+
+
+            <h2>Wimbledon 2018: Rafael Nadal, Simona Halep, Johanna Konta, Kyle Edmund start on Tuesday</h2>
+
+            <ul class="list-inline list-inline--divided gel-brevier">
+                <li class="story-info__item story-info__item--time">
+                    <span class="timestamp">
+                        <i aria-hidden="true" class="timestamp__icon gelicon gelicon--duration"></i>
+                        <time data-timestamp="1530620278" data-timestamp-inserted="true" data-verbose="" class="relative-time">20 minutes ago</time>
+                    </span>
+                </li>
+                <li>
+                    <span class="section-tag--nested-link gel-brevier  section-tag">
+                        <!-- <span class="vh">From the section</span>
+                        <a href="/sport/football/world-cup">World Cup</a> -->
+                    </span>
+                </li>
+            </ul>
+
+
+            <p>British number ones Johanna Konta and Kyle Edmund begin their Wimbledon campaigns on show courts on Tuesday.</p>
+
+            <p>Konta, seeded 22nd, faces unseeded Russian Natalia Vikhlyantseva on court two at 11:30 BST as she looks to replicate her run to last year's semi-finals.</p>
+
+            <p>Edmund, who has only won one main-draw match at SW19, meets Australian Alex Bolt on Court One at 13:00.</p>
+
+            <p>World number ones Rafael Nadal and Simona Halep also play on day two.</p>
+
         </div>
     </body>
 </html>
