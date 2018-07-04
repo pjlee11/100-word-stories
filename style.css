@@ -16,6 +16,8 @@ h1, h2, h3, p, a {
 #one-hundred-word-article-wrapper-story-3 p,
 #one-hundred-word-article-wrapper-story-4 p {
 	font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 /*
 #one-hundred-word-article-wrapper-story-0 p:first-of-type {
@@ -199,3 +201,6 @@ img {
     margin: 0;
 }
 
+#see-full-article-btn {
+    margin-top: 16px !important;
+}
