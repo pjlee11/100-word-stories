@@ -25,7 +25,18 @@
                 console.log(this.document.getElementsByClassName('amp-story-page-wrapper'));
                 function slideUp() {
 
+                const ampstory = this.document.getElementsByClassName('i-amphtml-story-loaded')[0];
 
+                for (var i = 0; i < ampstory.children.length; i++) {
+                    const element = ampstory.children[i]
+
+                    if (element.tagName == 'DIV') {
+                        if (element.shadowRoot != undefined) {
+                            element.classList.add('display-none');
+                        }
+                    }
+
+                }
 
                 const ampWrapper = this.document.getElementsByClassName('amp-story-page-wrapper');
                 const els = ampWrapper[0].children[0].children;
@@ -36,7 +47,6 @@
                         console.log('storyId', storyId);
                     }
                 }
-
 
                 document.getElementById("see-article-btn").classList.add('display-none');
 
@@ -57,6 +67,19 @@
                 }
 
                 function slideDown() {
+
+                    const ampstory = this.document.getElementsByClassName('i-amphtml-story-loaded')[0];
+
+                    for (var i = 0; i < ampstory.children.length; i++) {
+                        const element = ampstory.children[i]
+
+                        if (element.tagName == 'DIV') {
+                            if (element.shadowRoot != undefined) {
+                                element.classList.remove('display-none');
+                            }
+                        }
+
+                    }
 
                     const ampWrapper = this.document.getElementsByClassName('amp-story-page-wrapper');
                     const els = ampWrapper[0].children[0].children;
