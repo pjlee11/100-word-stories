@@ -23,9 +23,25 @@
 
             <script>
                 function slideUp() {
-                    document.getElementById("see-article-btn").classList.add('display-none');
 
-                  var elem = document.getElementById("one-hundred-word-article-wrapper");
+
+
+                const ampWrapper = this.document.getElementsByClassName('amp-story-page-wrapper');
+                const els = ampWrapper[0].children[0].children;
+                let storyId;
+                for(let i = 0; i < els.length; i++) {
+                    if(els[i].getAttribute('distance') === "0") {
+                        storyId = els[i].id;
+                        console.log('storyId', storyId);
+                    }
+                }
+
+
+                document.getElementById("see-article-btn").classList.add('display-none');
+
+                const storyDiv = `one-hundred-word-article-wrapper-${storyId}`;
+
+                  var elem = document.getElementById(storyDiv);
                   var pos = 800;
                   var id = setInterval(frame, 1);
                   function frame() {
@@ -40,9 +56,23 @@
                 }
 
                 function slideDown() {
+
+                    const ampWrapper = this.document.getElementsByClassName('amp-story-page-wrapper');
+                    const els = ampWrapper[0].children[0].children;
+                    let storyId;
+                    for(let i = 0; i < els.length; i++) {
+                        if(els[i].getAttribute('distance') === "0") {
+                            storyId = els[i].id;
+                            console.log('storyId', storyId);
+                        }
+                    }
+
+
                   document.getElementById("see-carousel-btn").classList.remove('display-block');
 
-                  var elem = document.getElementById("one-hundred-word-article-wrapper");
+                   const storyDiv = `one-hundred-word-article-wrapper-${storyId}`;
+
+                  var elem = document.getElementById(storyDiv);
                   var pos = 0;
                   var id = setInterval(frame, 1);
                   function frame() {
@@ -309,7 +339,7 @@
            <amp-story-page id="story-0">
                 <amp-story-grid-layer template="vertical" class="image-layer">
                     <div class="image-container">
-                        <amp-img src="https://ichef.bbci.co.uk/images/ic/720x405/p06cq0hs.jpg" width="720" height="405" layout="responsive"></amp-img>
+                        <amp-img src="https://ichef.bbci.co.uk/news/624/cpsprodpb/17245/production/_102298749_hi040475320.jpg" width="720" height="405" layout="responsive"></amp-img>
                     </div>
                     <div class="gradient-container"></div>
                     <div class="logo-container">
@@ -319,16 +349,16 @@
 
                 <amp-story-grid-layer template="vertical" class="image-title-padding">
                     <div class="red-line">
-                        <h1 class="story-headline">Thailand cave rescue: Boys found alive after nine days</h1>
+                        <h1 class="story-headline">Yes, gay conversion therapy is still a thing in the UK</h1>
                    </div>
-                    <p class="story-summary">Rescuers must now extract the 12 boys and their teacher, discovered after nine nerve-wracking days.</p>
+                    <p class="story-summary">Not for much longer though. It turns out that at least 7% of LGBT people in the UK have had the treatment or been offered it.</p>
                 </amp-story-grid-layer>
             </amp-story-page>
 
            <amp-story-page id="story-1">
                 <amp-story-grid-layer template="vertical" class="image-layer">
                     <div class="image-container">
-                        <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/18524/production/_102302699_cffc81a6-9a4a-460d-bbd7-0e8fcb2551ed.jpg" width="976" height="549" layout="responsive"></amp-img>
+                        <amp-img src="https://www.billboard.com/files/media/Drake-cr-Caitlin-Cronenberg-2016-billboard-1548-650-03.jpg" width="976" height="549" layout="responsive"></amp-img>
                     </div>
                     <div class="gradient-container"></div>
                     <div class="logo-container">
@@ -338,16 +368,16 @@
 
                 <amp-story-grid-layer template="vertical" class="image-title-padding">
                     <div class="red-line">
-                        <h1 class="story-headline">UK weather: Heatwave to continue for another two weeks</h1>
+                        <h1 class="story-headline">YOU MUST LISTEN TO DRAKE</h1>
                    </div>
-                    <p class="story-summary">As forecasters predict the "very warm sunshine" is here to stay, people are urged to use water wisely.</p>
+                    <p class="story-summary">Have you heard? Drake has a new album out! If you pay for Spotify Premium, you’ll know this already - and you may be upset.</p>
                 </amp-story-grid-layer>
             </amp-story-page>
 
            <amp-story-page id="story-2">
                 <amp-story-grid-layer template="vertical" class="image-layer">
                     <div class="image-container">
-                        <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/30D4/production/_102300521_aleshamacphail.jpg" width="976" height="549" layout="responsive"></amp-img>
+                        <amp-img src="https://ichef.bbci.co.uk/news/660/media/images/76892000/jpg/_76892555_love-heart.jpg" width="976" height="549" layout="responsive"></amp-img>
                     </div>
                     <div class="gradient-container"></div>
                     <div class="logo-container">
@@ -357,16 +387,16 @@
 
                 <amp-story-grid-layer template="vertical" class="image-title-padding">
                     <div class="red-line">
-                        <h1 class="story-headline">Body of missing Alesha MacPhail, 6, found on Isle of Bute</h1>
+                        <h1 class="story-headline">How healthy is your relationship?</h1>
                    </div>
-                    <p class="story-summary">The girl had been reported missing on the Isle of Bute two-and-a-half hours earlier.</p>
+                    <p class="story-summary">One doctor thinks he can tell with a scary degree of accuracy whether a couple will stay together.</p>
                 </amp-story-grid-layer>
             </amp-story-page>
 
            <amp-story-page id="story-3">
                 <amp-story-grid-layer template="vertical" class="image-layer">
                     <div class="image-container">
-                        <amp-img src="https://ichef.bbci.co.uk/images/ic/720x405/p06cpkgf.jpg" width="720" height="405" layout="responsive"></amp-img>
+                        <amp-img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/18524/production/_102302699_cffc81a6-9a4a-460d-bbd7-0e8fcb2551ed.jpg" width="720" height="405" layout="responsive"></amp-img>
                     </div>
                     <div class="gradient-container"></div>
                     <div class="logo-container">
@@ -376,16 +406,16 @@
 
                 <amp-story-grid-layer template="vertical" class="image-title-padding">
                     <div class="red-line">
-                        <h1 class="story-headline">Brexit: May says EU must treat UK blueprint 'seriously'</h1>
+                        <h1 class="story-headline">My head’s in a haze, it’s like a heat wave</h1>
                    </div>
-                    <p class="story-summary">Theresa May urges more flexibility from the EU ahead of a new UK plan for customs arrangements.</p>
+                    <p class="story-summary">The beautiful hot weather in the UK is going to continue for two more weeks. Happy days!</p>
                 </amp-story-grid-layer>
             </amp-story-page>
 
            <amp-story-page id="story-4">
                 <amp-story-grid-layer template="vertical" class="image-layer">
                     <div class="image-container">
-                        <amp-img src="https://ichef.bbci.co.uk/news/904/cpsprodpb/D58D/production/_102296645_mediaitem102296639.jpg" width="976" height="549" layout="responsive"></amp-img>
+                        <amp-img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/9006/production/_102307863_d442f4c5-e868-4a0e-8159-2067dda333f0.jpg" width="976" height="549" layout="responsive"></amp-img>
                     </div>
                     <div class="gradient-container"></div>
                     <div class="logo-container">
@@ -395,9 +425,9 @@
 
                 <amp-story-grid-layer template="vertical" class="image-title-padding">
                     <div class="red-line">
-                        <h1 class="story-headline">Syria war: 270,000 displaced by fighting in south-west</h1>
+                        <h1 class="story-headline">Deadly times in the Mediterranean</h1>
                    </div>
-                    <p class="story-summary">Government forces began an assault on rebel-held areas of Deraa and Quneitra provinces two weeks ago.</p>
+                    <p class="story-summary">More than 170 people have gone missing since Friday after their boats sank while they were crossing from Libya to Europe.</p>
                 </amp-story-grid-layer>
             </amp-story-page>
         </amp-story>
@@ -409,7 +439,7 @@
     ">
         <p class="cta-text">Article in 100 words</p>
     </div>
-        <div id="one-hundred-word-article-wrapper" style="
+        <div id="one-hundred-word-article-wrapper-story-0" style="
             position: absolute;
             top: 800px;
             height: 100%;
@@ -448,6 +478,192 @@
                 <a href="https://www.bbc.co.uk/news/amp/world-middle-east-44682266" class="cta-text">Read the full story</a>
             </div>
         </div>
+
+
+    <!-- NUMBER TWO -->
+     <div id="one-hundred-word-article-wrapper-story-1" style="
+            position: absolute;
+            top: 800px;
+            height: 100%;
+            background-color: #fff;
+            ">
+
+            <div class="article-heading">
+
+            <figure class="media-landscape has-caption full-width lead">
+                <span class="image-and-copyright-container">
+
+                    <img class="js-image-replace" alt="Drake became the face of Spotify's playlists" src="https://ichef.bbci.co.uk/news/660/cpsprodpb/11292/production/_102309207_drake_comp.jpg" width="1024" height="576" data-highest-encountered-width="660">
+
+
+
+                     <span class="off-screen">Image copyright</span>
+                     <span class="story-image-copyright">AFP / Spotify</span>
+
+                </span>
+
+            </figure>
+
+
+                <span class="gradient">
+                    <h2>YOU MUST LISTEN TO DRAKE</h2>
+                </span>
+
+            </div>
+            <p>Drake’s new album Scorpion has been heavily talked up, and it’s broken streaming records in only a few days.</p>
+
+            <p>Quite a lot of people are jaded with seeing Drake’s face everywhere - in particular, Spotify Premium users, who pay good money every month to not see non-stop adverts.</p>
+
+            <p>The problem? Ads for Scorpion have been popping up on their feeds. All the time. So they’re starting to ask for refunds from Spotify - and getting them.</p>
+
+            <p>Ten points if you spot all the Drake song names in the last few paragraphs.</p>
+
+            <div id="see-full-article-btn" class="cta-button cta-button__story" style="
+                margin-top: 0;
+            ">
+                <a href="https://www.bbc.co.uk/news/entertainment-arts-44695062" class="cta-text">Read the full story</a>
+            </div>
+        </div>
+
+
+    <!-- NUMBER THREE -->
+
+      <div id="one-hundred-word-article-wrapper-story-2" style="
+            position: absolute;
+            top: 800px;
+            height: 100%;
+            background-color: #fff;
+            ">
+
+            <div class="article-heading">
+
+            <figure class="media-landscape has-caption full-width lead">
+                <span class="image-and-copyright-container">
+
+                    <img class="js-image-replace" alt="Drake became the face of Spotify's playlists" src="https://ichef.bbci.co.uk/news/660/cpsprodpb/11292/production/_102309207_drake_comp.jpg" width="1024" height="576" data-highest-encountered-width="660">
+
+
+
+                     <span class="off-screen">Image copyright</span>
+                     <span class="story-image-copyright">AFP / Spotify</span>
+
+                </span>
+
+            </figure>
+
+
+                <span class="gradient">
+                    <h2>How healthy is your relationship?</h2>
+                </span>
+
+            </div>
+            <p>Over four decades, Dr John Gottman and his team have studied about 3,000 couples at a “Love Lab”.</p>
+
+            <p>He has four main ways for couples to carry out a health-check on the relationship. And a word of advice for anyone who’s freaked out by the results: don’t worry.</p>
+
+            <p>Dr Gottman says every relationship in trouble can be saved; spotting the warnings signs is a good thing.</p>
+
+
+            <div id="see-full-article-btn" class="cta-button cta-button__story" style="
+                margin-top: 0;
+            ">
+                <a href="http://www.bbc.co.uk/guides/zwq86fr" class="cta-text">Read the full story</a>
+            </div>
+        </div>
+
+         <!-- NUMBER FOUR -->
+
+     <div id="one-hundred-word-article-wrapper-story-3" style="
+            position: absolute;
+            top: 800px;
+            height: 100%;
+            background-color: #fff;
+            ">
+
+            <div class="article-heading">
+
+            <figure class="media-landscape has-caption full-width lead">
+                <span class="image-and-copyright-container">
+
+                    <img class="js-image-replace" alt="Drake became the face of Spotify's playlists" src="http://ichef.bbci.co.uk/images/ic/480xn/p03k9y1m.jpg" width="1024" height="576" data-highest-encountered-width="660">
+
+
+
+                     <span class="off-screen">Image copyright</span>
+                     <span class="story-image-copyright">AFP / Spotify</span>
+
+                </span>
+
+            </figure>
+
+
+                <span class="gradient">
+                    <h2>My head’s in a haze, it’s like a heat wave</h2>
+                </span>
+
+            </div>
+            <p>It’s not yet the longest prolonged heat wave in UK history - the sweaty summer of 1976 holds that record. But the 30C+ heat is going to carry on well into next week.</p>
+
+            <p>So what are the effects? If you’re a hedgehog, not great - you really start to depend on the kindness of strangers for water. If you’re a butterfly, it’s great: enjoy your down time.</p>
+
+            <p>It’s not brilliant news for our transport system - there’s a lower speed limit on certain parts of the rail network, for example.</p>
+
+
+            <div id="see-full-article-btn" class="cta-button cta-button__story" style="
+                margin-top: 0;
+            ">
+                <a href="https://www.bbc.co.uk/news/uk-44680164" class="cta-text">Read the full story</a>
+            </div>
+        </div>
+
+        <!-- NUMBER FIVE -->
+
+
+   <div id="one-hundred-word-article-wrapper-story-4" style="
+            position: absolute;
+            top: 800px;
+            height: 100%;
+            background-color: #fff;
+            ">
+
+            <div class="article-heading">
+
+            <figure class="media-landscape has-caption full-width lead">
+                <span class="image-and-copyright-container">
+
+                    <img class="js-image-replace" alt="Deadly times" src="https://ichef.bbci.co.uk/news/660/cpsprodpb/9006/production/_102307863_d442f4c5-e868-4a0e-8159-2067dda333f0.jpg" width="1024" height="576" data-highest-encountered-width="660">
+
+
+
+                     <span class="off-screen">Image copyright</span>
+                     <span class="story-image-copyright">AFP / Spotify</span>
+
+                </span>
+
+            </figure>
+
+
+                <span class="gradient">
+                    <h2>Deadly times in the Mediterranean</h2>
+                </span>
+
+            </div>
+            <p>Keep an eye on what’s happening in the Med: it’s about to get harder for migrants to reach Europe because of an EU deal to tighten borders last week.</p>
+
+            <p>This means more people, many of whom live in shocking poverty in Africa, could try and reach Europe in the meantime. That involves taking huge risks at sea.</p>
+
+            <p>Migration officials say they’re worried about the spike in deaths over recent days. At least 63 people are missing after one boat sank on Sunday. About 1,000 people have died in the Mediterranean this year.</p>
+
+            <p>In 2016, a million people crossed the sea to Europe. Numbers aren’t anywhere near as high as that now, but it’s still a risk a lot of people are still taking.</p>
+
+
+            <div id="see-full-article-btn" class="cta-button cta-button__story" style="
+                margin-top: 0;
+            ">
+                <a href="https://www.bbc.co.uk/news/world-africa-44693962" class="cta-text">Read the full story</a>
+            </div>
+        </div>
+
         <div id="see-carousel-btn" onclick="slideDown();" class="open-article-cta cta-button cta-button__story" style="
             margin: 0;
             display: none;
